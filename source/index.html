@@ -2,16 +2,31 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go. Интернет-магазин кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../source/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../source/favicons/favicons/apple-icon.png">
+    <link rel="manifest" href="drink2go.webmanifest">
+
+    <link rel="preload" href="../source/fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="../source/fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="../source/fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header" data-test="header">
+      <div class="header__wrap container" >
+        <a href="#" aria-label="Перейти на главную страницу">
+          <img class="logo__img" src="img/logo-img-mobile.svg" width="32" height="36" alt="Логотип Drink2Go">
+        </a>
+
+      </div>
+
+    </header>
     <main>
       <h1>Страница для старта</h1>
     </main>
+    <script src="scripts/index.js" defer></script>
   </body>
 </html>
