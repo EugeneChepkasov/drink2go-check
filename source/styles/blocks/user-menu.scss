@@ -26,34 +26,31 @@
     display: flex;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    top: 22px;
-    left: 22px;
-
-    @media (min-width: $tablet-width) {
-      top: 32px;
-      left: 22px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 20px;
-    }
-  }
-
   &--lk::before {
-    background-image: url("../../icons/users-lk.svg");
+    mask-image: url("../../icons/users-lk.svg");
   }
 
   &--basket::before {
-    background-image: url("../../icons/users-basket.svg");
+    mask-image: url("../../icons/users-basket.svg");
+  }
+}
+
+.user-menu__link::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 22px;
+  left: 22px;
+  background-color: $base-text-color;
+
+  @media (min-width: $tablet-width) {
+    top: 32px;
+    left: 22px;
   }
 
-  &:active {
-    background: $bg-secondary-color;
+  @media (min-width: $desktop-width) {
+    left: 20px;
   }
 }
 
@@ -65,5 +62,20 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
+  }
+}
+
+.user-menu__link:active {
+  background: $bg-secondary-color;
+}
+
+.user-menu__link:hover,
+.user-menu__link:focus {
+  &::before {
+    background-color: $primary-color;
+  }
+
+  .user-menu__text {
+    color: $primary-color;
   }
 }
