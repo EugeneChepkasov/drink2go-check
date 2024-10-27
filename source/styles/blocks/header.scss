@@ -1,5 +1,44 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: -20px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.header__logo {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    flex-grow: 1;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+   margin-right: 5px;;
+  }
+}
+
+.header__user-menu {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.header__description {
+  display: none;
+  max-width: 126px;
+  font-family: inherit;
+  color: $base-text-color;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  font-weight: 400;
+  margin: auto auto auto 20px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

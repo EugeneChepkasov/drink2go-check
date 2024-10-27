@@ -1,0 +1,129 @@
+.main-nav__button {
+  position: relative;
+  padding: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 16px;
+    top: 30px;
+    right: 22px;
+    background-color: $base-text-color;
+    box-shadow: 0 5px 0 0 $base-text-color, 0 -5px 0 0 $base-text-color;
+  }
+
+  &:active {
+    background: $bg-secondary-color;
+  }
+
+  &--opened {
+    &::before {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 16px;
+      top: 30px;
+      right: 22px;
+      transform: rotate(45deg);
+      background-color: $base-text-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  min-width: $mobile-width;
+  @include list-reset;
+  text-align: center;
+  top: 60px;
+  left: 0;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+    }
+}
+
+.main-nav__item {
+  @media (max-width: $tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-secondary-color;
+    }
+
+    &:last-child::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-secondary-color;
+    }
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  @include menu-text;
+  display: block;
+  padding: 20px 0;
+
+  &:active {
+    background: $bg-secondary-color;
+    @media (min-width: $tablet-width) {
+    color: $primary-color;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+    color: $primary-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      color: $primary-color;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $primary-color;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

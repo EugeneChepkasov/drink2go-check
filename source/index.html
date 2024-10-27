@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Drink2Go. Интернет-магазин кофейных напитков</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="../source/favicons/favicon.svg" sizes="any" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../source/favicons/favicons/apple-icon.png">
-    <link rel="manifest" href="drink2go.webmanifest">
 
-    <link rel="preload" href="../source/fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="../source/fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="../source/fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body class="page__body">
-    <header class="header" data-test="header">
-      <div class="header__wrap container" >
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go. Интернет-магазин кофейных напитков</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="../source/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../source/favicons/favicons/apple-icon.png">
+  <link rel="manifest" href="drink2go.webmanifest">
+
+  <link rel="preload" href="../source/fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="../source/fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="../source/fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="page__body">
+  <header class="header container" data-test="header">
+    <div class="header__wrap">
+      <div class="header__logo logo">
         <a href="#" aria-label="Перейти на главную страницу">
-          <img class="logo__img" src="img/logo-img-mobile.svg" width="32" height="36" alt="Логотип Drink2Go">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-full.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+            <img class="logo__img" src="images/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go">
+          </picture>
         </a>
-
+        <p class="header__description">
+          Интернет-магазин кофейных напитков
+        </p>
       </div>
+      <ul class="header__user-menu user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__link user-menu__link--lk" href="#" aria-label="Войти в личный кабинет">
+            <span class="user-menu__text">Войти</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link user-menu__link--basket" href="#" aria-label="Открыть корзину">
+            <span class="user-menu__text">Корзина</span>
+          </a>
+        </li>
+      </ul>
 
-    </header>
-    <main>
-      <h1>Страница для старта</h1>
-    </main>
-    <script src="scripts/index.js" defer></script>
-  </body>
+      <nav class="header__main-nav main-nav">
+        <button class="main-nav__button" href="#" aria-label="Открыть меню"></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Каталог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Доставка</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О нас</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+
+  </header>
+  <main>
+    <h1 class="visually-hidden">Страница для старта</h1>
+  </main>
+  <script src="scripts/index.js" type="module" defer></script>
+</body>
+
 </html>

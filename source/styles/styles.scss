@@ -3,6 +3,13 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
+@import "./common/container.scss";
+@import "./common/visually-hidden.scss";
+@import "./common/page.scss";
+
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/user-menu.scss";
+@import "./blocks/main-nav.scss";
