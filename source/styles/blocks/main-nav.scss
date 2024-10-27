@@ -48,6 +48,7 @@
   flex-direction: column;
   position: absolute;
   min-width: $mobile-width;
+
   @include list-reset;
   text-align: center;
   top: 60px;
@@ -63,7 +64,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 20px;
-    }
+  }
 }
 
 .main-nav__item {
@@ -91,20 +92,22 @@
 
 .main-nav__link {
   position: relative;
+
   @include menu-text;
   display: block;
   padding: 20px 0;
 
   &:active {
     background: $bg-secondary-color;
+
     @media (min-width: $tablet-width) {
-    color: $primary-color;
+      color: $primary-color;
     }
   }
 
   &:hover {
     @media (min-width: $tablet-width) {
-    color: $primary-color;
+      color: $primary-color;
     }
   }
 
@@ -115,6 +118,7 @@
   &--active {
     @media (min-width: $tablet-width) {
       color: $primary-color;
+
       &::after {
         position: absolute;
         content: "";

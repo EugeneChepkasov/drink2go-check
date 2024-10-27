@@ -1,10 +1,11 @@
 .user-menu {
   display: flex;
   justify-content: right;
+
   @include list-reset;
 
   @media (min-width: $desktop-width) {
-  gap: 20px;
+    gap: 20px;
   }
 }
 
@@ -44,11 +45,11 @@
   }
 
   &--lk::before {
-    background-image: url(../../icons/users-lk.svg);
+    background-image: url("../../icons/users-lk.svg");
   }
 
   &--basket::before {
-    background-image: url(../../icons/users-basket.svg);
+    background-image: url("../../icons/users-basket.svg");
   }
 
   &:active {
@@ -58,6 +59,7 @@
 
 .user-menu__text {
   display: none;
+
   @include menu-text;
   margin-left: 24px;
 
